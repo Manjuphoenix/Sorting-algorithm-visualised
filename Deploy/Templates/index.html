@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Intellectual property of Mohammed_Sanaullah and Manjunath_D-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" link href="/static/style.css">
+    <title>Sorty</title>
+</head>
+
+<body>
+    <header class="v-header container">
+        <div class="fullscreen-video-wrap">
+            <div class="video-container">
+                <div class="color-overlay"></div>
+                <video controls autoplay loop>
+                    <source src="/static/backback.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="header-overlay"></div>
+            <div class="header-content text-md-center">
+                <h1>Sorting Algorithm Visualizer!</h1>
+                <p>This Dynamic Webpage helps to visualize the sorting algorithms as they work on sorting Randomly generated Bar Plots into ascending order of their magnitudes </p>
+            </div>
+    </header>
+  <section class="section section-b">
+        <div class="container">
+            <h2>WORK AREA:</h2>
+            <form class="form-inline" action="{{url_for('actual_test')}}" method="POST">
+                <label>Select Type Of Sort</label>
+                <select class="selectpicker form-control" id="rating" name="option">
+                    <option value="bubblesort">Bubble Sort</option>
+                    <option value="insertionsort">Insertion Sort</option>
+                    <option value="selectionsort">Selection Sort</option>
+                    <option value="mergesort">Merge Sort</option>
+                    <option value="quicksort">Quick Sort</option>
+                </select>
+                <p>
+                    Size of array (For Faster Result, Range[10,20]) : <input type="number" name="Size" />
+                </p>
+                <p><input type="submit" value="submit" /></p>
+            </form>
+        </div>
+  </section>
+</body>
+
+</html>
